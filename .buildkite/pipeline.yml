@@ -1,6 +1,6 @@
 steps:
   - name: ":hammer: :linux:"
     key: test-linux
-    command: ".buildkite/tests.sh"
+    command: ".buildkite/test.sh"
     parallelism: 5
     
